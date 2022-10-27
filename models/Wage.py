@@ -1,18 +1,17 @@
 from db import db
 from typing import List
 
-
 class WageModel(db.Model):
     __tablename__ = "wages"
 
     id = db.Column(db.Integer, primary_key=True)
     occ_code = db.Column(db.String(7), nullable=False)
     job_title = db.Column(db.String(70), nullable=False)
-    annual_mean_wage = db.Column(db.Integer, nullable=False)
-    annual_wage_10_percent = db.Column(db.Integer, nullable=False)
-    annual_wage_25_percent = db.Column(db.Integer, nullable=False)
-    annual_wage_75_percent = db.Column(db.Integer, nullable=False)
-    annual_wage_90_percent = db.Column(db.Integer, nullable=False)
+    annual_mean_wage = db.Column(db.Integer, nullable=True)
+    annual_wage_10_percent = db.Column(db.Integer, nullable=True)
+    annual_wage_25_percent = db.Column(db.Integer, nullable=True)
+    annual_wage_75_percent = db.Column(db.Integer, nullable=True)
+    annual_wage_90_percent = db.Column(db.Integer, nullable=True)
 
     def __init__(self, occ_code, job_title, annual_mean_wage, annual_wage_10_percent, annual_wage_25_percent, annual_wage_75_percent, annual_wage_90_percent):
         self.occ_code = occ_code

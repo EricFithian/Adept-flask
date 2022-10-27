@@ -4,11 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask-restplus = "*"
 flask-marshmallow = "*"
 flask-sqlalchemy = "*"
 marshmallow-sqlalchemy = "*"
 flask = "*"
+marshmallow = "*"
+flask-restx = "*"
+werkzeug = "==2.1.2"
 
 [dev-packages]
 
